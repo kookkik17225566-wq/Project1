@@ -652,7 +652,7 @@ html{
    MOBILE
 ====================================== */
 
-@media (max-width:768px){
+@media (max-width:600px){
 
 .main-home{
 
@@ -894,7 +894,7 @@ img{
    MOBILE
 ====================================== */
 
-@media (max-width:768px){
+@media (max-width:600px){
 
 .navbar{
 
@@ -1158,9 +1158,7 @@ video{
 
 }
 
-/* มือถือ */
-
-@media(max-width:768px){
+@media(max-width:600px){
 
 .login-card{
 
@@ -1399,7 +1397,7 @@ video{
             MOBILE
 ========================================== */
 
-@media (max-width:768px){
+@media (max-width:600px){
 
 /* Header */
 
@@ -1706,7 +1704,7 @@ video{
                 MOBILE
 ========================================== */
 
-@media (max-width:768px){
+@media (max-width:600px){
 
 .contact-header h1{
 
@@ -2100,7 +2098,7 @@ video{
                 MOBILE
 ========================================== */
 
-@media(max-width:768px){
+@media(max-width:600px){
 
 .character-banner img{
 
