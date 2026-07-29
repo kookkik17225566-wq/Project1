@@ -1,0 +1,2141 @@
+/* ===========================
+   รวมทั้งWEB
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Arial Rounded MT Bold','Helvetica Rounded',Arial,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+.navbar{
+
+    width:100%;
+
+    background:#bce3ff;
+
+    border-bottom:4px solid #ffb7c5;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:15px 40px;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:28px;
+
+    font-weight:bold;
+
+    color:#ff3366;
+
+    text-shadow:2px 2px #fff;
+
+}
+
+.logo-icon{
+
+    width:55px;
+
+    height:auto;
+
+    object-fit:contain;
+
+}
+
+.nav-links{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.nav-links li{
+
+    list-style:none;
+
+}
+
+.nav-links a{
+
+    text-decoration:none;
+
+    color:#ff3366;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    padding:8px 12px;
+
+    position:relative;
+
+    transition:.3s;
+
+    text-shadow:1px 1px #fff;
+
+}
+
+.nav-links a:hover{
+
+    color:#ff6b8b;
+
+    transform:translateY(-2px);
+
+}
+
+.nav-links a::before{
+
+    content:"✦";
+
+    position:absolute;
+
+    left:-12px;
+
+    opacity:0;
+
+    color:white;
+
+    transition:.3s;
+
+}
+
+.nav-links a:hover::before{
+
+    opacity:1;
+
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero-content{
+
+    width:min(100%,1400px);
+
+    margin:20px auto;
+
+    background:#fff0f3;
+
+    border:6px solid #ff3366;
+
+    border-radius:28px;
+
+    padding:20px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.character{
+
+    width:100%;
+
+    max-width:1400px;
+
+    display:block;
+
+    height:500px;
+
+}
+
+/* กล่องข้อความ */
+
+.hero-text{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:30px;
+
+}
+
+/* หัวข้อ */
+
+.hero-text h1{
+
+    color:#ff4d6d;
+
+    font-size:clamp(34px,5vw,60px);
+
+    line-height:1.15;
+
+    text-shadow:
+    3px 3px white,
+    5px 5px #ffd2dc;
+
+}
+
+/* ข้อความ */
+
+.hero-text p{
+
+    margin-top:18px;
+
+    margin-bottom:40px;
+
+    color:#4a4a4a;
+
+    font-size:clamp(18px,2vw,30px);
+
+    font-weight:600;
+
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.button{
+
+    display:inline-block;
+
+    padding:15px 48px;
+
+    border-radius:50px;
+
+    background:linear-gradient(180deg,#ff758f,#ff4d6d);
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:24px;
+
+    font-weight:bold;
+
+    border:4px solid white;
+
+    box-shadow:
+    0 6px #ff2a51,
+    0 10px 18px rgba(255,77,109,.35);
+
+    transition:.25s;
+
+}
+
+.button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 9px #ff2a51,
+    0 15px 25px rgba(255,77,109,.45);
+
+}
+
+.button:active{
+
+    transform:translateY(3px);
+
+}
+
+/* ===========================
+   HERO RESPONSIVE
+=========================== */
+
+@media (max-width:900px){
+
+.hero-content{
+
+    padding:20px;
+
+}
+
+.hero-text{
+
+    padding:20px;
+
+}
+
+.hero-text p{
+
+    margin-bottom:25px;
+
+}
+
+.button{
+
+    font-size:20px;
+
+    padding:13px 35px;
+
+}
+
+}
+
+@media (max-width:600px){
+
+.navbar{
+
+    justify-content:center;
+
+}
+
+.logo{
+
+    font-size:22px;
+
+}
+
+.logo-icon{
+
+    width:42px;
+
+}
+
+.nav-links{
+
+    gap:10px;
+
+}
+
+.nav-links a{
+
+    font-size:16px;
+
+}
+
+.hero-content{
+
+    border-width:5px;
+
+}
+
+.hero-text h1{
+
+    font-size:clamp(26px,7vw,40px);
+
+}
+
+.hero-text p{
+
+    font-size:16px;
+
+}
+
+.button{
+
+    font-size:18px;
+
+    padding:12px 28px;
+
+}
+
+}
+/* ======================================
+   MAIN CONTENT
+====================================== */
+
+.main-home{
+
+    width:min(95%,1400px);
+
+    margin:40px auto;
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:25px;
+
+    background:#fff0f3;
+
+    border:6px solid #ffccd5;
+
+    border-radius:24px;
+
+    padding:20px;
+
+    align-items:start;
+
+}
+
+/* ======================================
+   LEFT : PROMOTION
+====================================== */
+
+.promotion-box{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+    width:100%;
+
+}
+
+.promotion-box a{
+
+    display:block;
+
+    transition:.3s;
+
+}
+
+.promotion-box a:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.promotion-free,
+.promotion-discount,
+.sethellokitty{
+
+    width:100%;
+
+    display:block;
+
+    border-radius:20px;
+
+    object-fit:cover;
+
+}
+
+/* ไม่กำหนดความสูงตายตัว */
+
+.sethellokitty{
+
+    aspect-ratio:16/10;
+
+}
+
+/* ======================================
+   RIGHT : VIDEO
+====================================== */
+
+.video-box{
+
+    width:100%;
+
+}
+
+.video-container{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+/* วิดีโอ */
+
+.loop-video{
+
+    width:100%;
+
+    display:block;
+
+    border-radius:20px;
+
+    background:black;
+
+}
+
+/* รูปด้านขวา */
+
+.video-image{
+
+    width:100%;
+
+    display:block;
+
+    border-radius:20px;
+
+    transition:0.3s;
+
+}
+
+.video-container a{
+
+    display:block;
+
+}
+
+.video-container a:hover{
+
+    transform:translateY(-4px);
+
+}
+/*รีวิวลูกค้า*/
+.review-box{
+
+    background:#fff6f8;
+
+    border:4px solid #ffc7d4;
+
+    border-radius:20px;
+
+    padding:18px;
+
+}
+
+.review-box h2{
+
+    text-align:center;
+
+    color:#ff4d6d;
+
+    margin-bottom:20px;
+
+    font-size:24px;
+
+}
+
+.review-card{
+
+    background:white;
+
+    border-radius:15px;
+
+    padding:15px;
+
+    margin-bottom:20px;
+
+    box-shadow:0 3px 8px rgba(0,0,0,.08);
+
+}
+
+.review-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:10px;
+
+}
+
+.profile{
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50px;
+
+    object-fit:cover;
+
+    border:3px solid #ffb6c1;
+
+}
+
+.review-header h4{
+
+    color:#ff4d6d;
+
+    margin-bottom:3px;
+
+}
+
+.stars{
+
+    color:#FFD700;
+
+    font-size:18px;
+
+}
+
+.review-card p{
+
+    color:#555;
+
+    line-height:1.5;
+
+    margin-bottom:10px;
+
+}
+
+.review-product{
+
+    width:100%;
+
+    border-radius:12px;
+
+}
+
+/* รูป Contact */
+
+#contactkitty{
+
+    width:100%;
+
+    height:auto;
+
+    border-radius:20px;
+
+}
+
+/* ======================================
+   BOTTOM IMAGE
+====================================== */
+
+.image{
+
+    width:min(95%,1400px);
+
+    margin:40px auto;
+
+}
+
+.images{
+
+    width:100%;
+
+    display:block;
+
+    border-radius:24px;
+
+}
+
+/* ======================================
+   MOBILE
+====================================== */
+
+@media (max-width:768px){
+
+.main-home{
+
+    grid-template-columns:1fr;
+
+}
+
+/* ให้ Promotion มาก่อน */
+
+.promotion-box{
+
+    order:1;
+
+}
+
+/* วิดีโอและรูปตามหลัง */
+
+.video-box{
+
+    order:2;
+
+}
+
+.loop-video{
+
+    border-radius:18px;
+
+}
+
+.video-image{
+
+    border-radius:18px;
+
+}
+
+}
+
+/* ======================================
+   FOOTER
+====================================== */
+
+.footer{
+
+    width:min(95%,1400px);
+
+    margin:50px auto;
+
+    background:#ffd6e0;
+
+    border-top:5px solid #ffb3c6;
+
+    border-radius:24px;
+
+    padding:30px;
+
+}
+
+.footer-container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    gap:30px;
+
+    flex-wrap:wrap;
+
+}
+
+.footer-info,
+.footer-social{
+
+    flex:1;
+
+    min-width:260px;
+
+}
+
+.footer-info h3,
+.footer-social h3{
+
+    color:#d63384;
+
+    margin-bottom:15px;
+
+    font-size:24px;
+
+}
+
+.footer-info p{
+
+    color:#555;
+
+    margin:10px 0;
+
+    line-height:1.6;
+
+}
+
+.footer-social a{
+
+    display:inline-block;
+
+    margin-right:15px;
+
+    transition:.3s;
+
+}
+
+.footer-social img{
+
+    width:48px;
+
+    height:auto;
+
+}
+
+.footer-social a:hover{
+
+    transform:translateY(-5px) scale(1.08);
+
+}
+
+.footer hr{
+
+    margin:25px 0;
+
+    border:none;
+
+    border-top:3px solid #ffc2d1;
+
+}
+
+.copyright{
+
+    text-align:center;
+
+    color:#666;
+
+    font-size:15px;
+
+}
+
+/* ======================================
+   IMAGE EFFECT
+====================================== */
+
+img{
+
+    max-width:100%;
+
+    height:auto;
+
+}
+
+.promotion-box img,
+.video-image,
+.images,
+.character{
+
+    transition:.35s;
+
+}
+
+.promotion-box img:hover,
+.video-image:hover{
+
+    transform:scale(1.02);
+
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+}
+
+/* ======================================
+   VIDEO EFFECT
+====================================== */
+
+.loop-video{
+
+    transition:.35s;
+
+}
+
+.loop-video:hover{
+
+    transform:scale(1.01);
+
+}
+
+/* ======================================
+   BUTTON EFFECT
+====================================== */
+
+.button{
+
+    transition:.25s;
+
+}
+
+.button:hover{
+
+    transform:translateY(-4px);
+
+}
+
+/* ======================================
+   SCROLLBAR
+====================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#ffe7ef;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#ff8fab;
+
+    border-radius:30px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#ff5d8f;
+
+}
+
+/* ======================================
+   MOBILE
+====================================== */
+
+@media (max-width:768px){
+
+.navbar{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+.logo{
+
+    justify-content:center;
+
+}
+
+.nav-links{
+
+    justify-content:center;
+
+}
+
+.hero-content{
+
+    margin:20px auto;
+
+    border-radius:20px;
+
+}
+
+.hero-text{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    padding:15px;
+
+}
+
+.hero-text h1{
+
+    font-size:30px;
+
+}
+
+.hero-text p{
+
+    font-size:16px;
+
+    margin:15px 0 20px;
+
+}
+
+.button{
+
+    font-size:17px;
+
+    padding:10px 25px;
+
+}
+
+.images{
+
+    border-radius:18px;
+
+}
+
+}
+
+/* ======================================
+   IMAGE SAFETY
+====================================== */
+
+img,
+video{
+
+    max-width:100%;
+
+    height:auto;
+
+}
+
+/* ======================================
+   PREVENT OVERFLOW
+====================================== */
+
+.home{
+    background:#e2f4ff;
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+/* ======================================
+   account page
+====================================== */
+/* ===========================
+   LOGIN PAGE
+=========================== */
+
+.login-page{
+
+    background:#e2f4ff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:100vh;
+
+    padding:20px;
+
+}
+
+.login-container{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.login-card{
+
+    width:100%;
+
+    max-width:430px;
+
+    background:#fff0f3;
+
+    border:6px solid #ffb7c5;
+
+    border-radius:25px;
+
+    padding:35px;
+
+    text-align:center;
+
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+
+}
+
+.login-img{
+
+    width:150px;
+
+    margin-bottom:20px;
+
+}
+
+.login-card h1{
+
+    color:#ff4d6d;
+
+    margin-bottom:10px;
+
+}
+
+.login-card p{
+
+    color:#666;
+
+    margin-bottom:25px;
+
+}
+
+.login-card form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+.login-card label{
+
+    text-align:left;
+
+    color:#ff4d6d;
+
+    font-weight:bold;
+
+}
+
+.login-card input{
+
+    padding:14px;
+
+    border:2px solid #ffc7d4;
+
+    border-radius:15px;
+
+    font-size:16px;
+
+    outline:none;
+
+}
+
+.login-card input:focus{
+
+    border-color:#ff4d6d;
+
+}
+
+.login-card button{
+
+    margin-top:10px;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:linear-gradient(#ff758f,#ff4d6d);
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.login-card button:hover{
+
+    transform:translateY(-3px);
+
+}
+
+.register-link{
+
+    margin-top:20px;
+
+}
+
+.register-link a{
+
+    color:#ff4d6d;
+
+    font-weight:bold;
+
+    text-decoration:none;
+
+}
+
+/* มือถือ */
+
+@media(max-width:768px){
+
+.login-card{
+
+    padding:25px;
+
+}
+
+.login-img{
+
+    width:120px;
+
+}
+
+.login-card h1{
+
+    font-size:30px;
+
+}
+
+}
+
+
+/* ==========================================
+            MENU PAGE
+========================================== */
+
+/* Header */
+
+.menu-header{
+    width:95%;
+    max-width:1400px;
+    margin:30px auto;
+    text-align:center;
+}
+
+.menu-header h1{
+    color:#ff4d6d;
+    font-size:55px;
+    text-shadow:3px 3px 0 #fff,5px 5px 0 #ffccd5;
+    margin-bottom:10px;
+}
+
+.menu-header p{
+    color:#666;
+    font-size:22px;
+}
+
+
+/* ==========================================
+        Promotion + Video
+========================================== */
+
+.menu-banner{
+
+    width:95%;
+    max-width:1400px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:25px;
+
+    margin:35px auto;
+
+}
+
+.side-promotion{
+
+    width:220px;
+
+    flex-shrink:0;
+
+}
+
+.side-promotion img{
+
+    width:100%;
+
+    display:block;
+
+    border-radius:20px;
+
+    border:4px solid #ffccd5;
+
+    transition:.3s;
+
+}
+
+.side-promotion img:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
+
+}
+
+.menu-video{
+
+    flex:1;
+
+}
+
+.menu-video video{
+
+    width:100%;
+
+    display:block;
+
+    border-radius:20px;
+
+    border:5px solid #ffccd5;
+
+    box-shadow:0 8px 18px rgba(0,0,0,.12);
+
+}
+
+
+/* ==========================================
+            CATEGORY
+========================================== */
+
+.category-section{
+
+    width:95%;
+
+    max-width:1400px;
+
+    margin:50px auto;
+
+}
+
+.category-section h2{
+
+    color:#ff4d6d;
+
+    font-size:42px;
+
+    margin-bottom:25px;
+
+}
+
+
+/* ==========================================
+            PRODUCT GRID
+========================================== */
+
+.product-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+
+}
+
+.product-card{
+
+    background:#fff0f3;
+
+    border:4px solid #ffd1dc;
+
+    border-radius:22px;
+
+    text-decoration:none;
+
+    overflow:hidden;
+
+    transition:.3s;
+
+}
+
+.product-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 10px 18px rgba(0,0,0,.15);
+
+}
+
+.product-card img{
+
+    width:100%;
+
+    height:270px;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+
+.product-card h3{
+
+    text-align:center;
+
+    color:#ff4d6d;
+
+    padding:18px;
+
+    font-size:28px;
+
+}
+
+
+/* ==========================================
+        Bottom Promotion Banner
+========================================== */
+
+.bottom-banner{
+
+    width:95%;
+
+    max-width:1400px;
+
+    margin:40px auto;
+
+}
+
+.bottom-banner img{
+
+    width:100%;
+
+    display:block;
+
+    border-radius:20px;
+
+}
+
+
+
+/* ==========================================
+            MOBILE
+========================================== */
+
+@media (max-width:768px){
+
+/* Header */
+
+.menu-header h1{
+
+    font-size:36px;
+
+}
+
+.menu-header p{
+
+    font-size:18px;
+
+}
+
+
+/* Promotion */
+
+.menu-banner{
+
+    flex-direction:column;
+
+}
+
+/* Promotion ซ้าย-ขวา */
+
+.side-promotion{
+
+    width:100%;
+
+    max-width:320px;
+
+}
+
+/* Video */
+
+.menu-video{
+
+    width:100%;
+
+}
+
+/* Product */
+
+.product-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.product-card img{
+
+    height:230px;
+
+}
+
+.category-section h2{
+
+    text-align:center;
+
+    font-size:34px;
+
+}
+
+}
+/* ==========================================
+                CONTACT PAGE
+========================================== */
+
+/* Header */
+
+.contact-header{
+    width:95%;
+    max-width:1400px;
+    margin:30px auto;
+    text-align:center;
+}
+
+.contact-header h1{
+    font-size:55px;
+    color:#ff4d6d;
+    text-shadow:3px 3px 0 #fff,5px 5px 0 #ffccd5;
+    margin-bottom:10px;
+}
+
+.contact-header p{
+    font-size:22px;
+    color:#666;
+}
+
+
+/* ==========================================
+            CONTACT INFO
+========================================== */
+
+.contact-info{
+
+    width:95%;
+    max-width:1400px;
+
+    margin:40px auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+    gap:25px;
+
+}
+
+.info-card{
+
+    background:#fff0f3;
+
+    border:4px solid #ffd1dc;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    text-align:center;
+
+    transition:.3s;
+
+    box-shadow:0 5px 12px rgba(0,0,0,.08);
+
+}
+
+.info-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 12px 20px rgba(0,0,0,.15);
+
+}
+
+.info-card h3{
+
+    color:#ff4d6d;
+
+    margin-bottom:12px;
+
+    font-size:24px;
+
+}
+
+.info-card p{
+
+    color:#555;
+
+    line-height:1.7;
+
+}
+
+
+/* ==========================================
+            CONTACT FORM
+========================================== */
+
+.contact-form-section{
+
+    width:95%;
+    max-width:900px;
+
+    margin:50px auto;
+
+    background:#fff0f3;
+
+    border:6px solid #ffccd5;
+
+    border-radius:25px;
+
+    padding:40px;
+
+}
+
+.contact-form-section h2{
+
+    text-align:center;
+
+    color:#ff4d6d;
+
+    font-size:38px;
+
+    margin-bottom:30px;
+
+}
+
+.contact-form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.form-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.form-group label{
+
+    margin-bottom:8px;
+
+    color:#ff4d6d;
+
+    font-weight:bold;
+
+    font-size:18px;
+
+}
+
+.form-group input,
+.form-group textarea{
+
+    padding:15px;
+
+    border:3px solid #ffd1dc;
+
+    border-radius:15px;
+
+    font-size:18px;
+
+    outline:none;
+
+    transition:.3s;
+
+    box-sizing:border-box;
+
+}
+
+.form-group input:focus,
+.form-group textarea:focus{
+
+    border-color:#ff4d6d;
+
+    box-shadow:0 0 10px rgba(255,77,109,.25);
+
+}
+
+.form-group textarea{
+
+    resize:vertical;
+
+}
+
+
+.contact-form .button{
+
+    align-self:center;
+
+    margin-top:10px;
+
+}
+
+
+/* ==========================================
+                MAP
+========================================== */
+
+.contact-map{
+
+    width:95%;
+    max-width:1400px;
+
+    margin:50px auto;
+
+    text-align:center;
+
+}
+
+.contact-map h2{
+
+    color:#ff4d6d;
+
+    font-size:40px;
+
+    margin-bottom:25px;
+
+}
+
+.contact-map iframe{
+
+    width:100%;
+
+    height:450px;
+
+    border:none;
+
+    border-radius:20px;
+
+    box-shadow:0 8px 18px rgba(0,0,0,.12);
+
+}
+
+
+/* ==========================================
+                MOBILE
+========================================== */
+
+@media (max-width:768px){
+
+.contact-header h1{
+
+    font-size:36px;
+
+}
+
+.contact-header p{
+
+    font-size:18px;
+
+}
+
+.contact-info{
+
+    grid-template-columns:1fr;
+
+}
+
+.contact-form-section{
+
+    padding:25px;
+
+}
+
+.contact-form-section h2{
+
+    font-size:30px;
+
+}
+
+.form-group label{
+
+    font-size:17px;
+
+}
+
+.form-group input,
+.form-group textarea{
+
+    font-size:16px;
+
+}
+
+.contact-map iframe{
+
+    height:300px;
+
+}
+}
+
+/* ==========================================
+            CHARACTER PAGE
+========================================== */
+
+/* ---------- Banner ---------- */
+
+.character-banner{
+    width:95%;
+    max-width:1400px;
+    margin:30px auto;
+}
+
+.character-banner img{
+    width:100%;
+    height:420px;
+    object-fit:cover;
+    display:block;
+    border-radius:25px;
+    border:6px solid #ffccd5;
+    box-shadow:0 8px 18px rgba(0,0,0,.12);
+}
+
+
+/* ---------- Top Info ---------- */
+
+.character-info{
+
+    width:95%;
+    max-width:1400px;
+
+    margin:35px auto;
+
+    display:grid;
+
+    grid-template-columns:220px 1fr 280px;
+
+    gap:25px;
+
+    align-items:start;
+
+}
+
+
+/* ---------- Sidebar ---------- */
+
+.character-sidebar{
+
+    background:#fff0f3;
+
+    border:5px solid #ffd1dc;
+
+    border-radius:20px;
+
+    padding:20px;
+
+}
+
+.character-sidebar h3{
+
+    text-align:center;
+
+    color:#ff4d6d;
+
+    margin-bottom:15px;
+
+}
+
+.character-sidebar ul{
+
+    list-style:none;
+
+    padding:0;
+
+}
+
+.character-sidebar li{
+
+    margin-bottom:10px;
+
+}
+
+.character-sidebar a{
+
+    display:block;
+
+    text-decoration:none;
+
+    color:#ff4d6d;
+
+    font-weight:bold;
+
+    background:white;
+
+    border:2px solid #ffd1dc;
+
+    border-radius:10px;
+
+    padding:12px;
+
+    transition:.3s;
+
+}
+
+.character-sidebar a:hover{
+
+    background:#ff4d6d;
+
+    color:white;
+
+}
+
+
+/* ---------- Status ---------- */
+
+.character-status{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+}
+
+.status-card{
+
+    background:#fff0f3;
+
+    border:5px solid #ffd1dc;
+
+    border-radius:20px;
+
+    padding:20px;
+
+    text-align:center;
+
+    box-shadow:0 5px 12px rgba(0,0,0,.08);
+
+}
+
+.status-card h3{
+
+    color:#ff4d6d;
+
+    margin-bottom:12px;
+
+}
+
+.status-card p{
+
+    font-size:24px;
+
+    color:#555;
+
+    font-weight:bold;
+
+}
+
+
+/* ---------- Shipping ---------- */
+
+.shipping-box{
+
+    background:#fff0f3;
+
+    border:5px solid #ffd1dc;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    text-align:center;
+
+    box-shadow:0 5px 12px rgba(0,0,0,.08);
+
+}
+
+.shipping-box h3{
+
+    color:#ff4d6d;
+
+    margin-bottom:15px;
+
+}
+
+.shipping-box p{
+
+    line-height:1.8;
+
+    color:#555;
+
+    margin-bottom:20px;
+
+}
+
+
+/* ---------- Products ---------- */
+
+.character-products{
+
+    width:95%;
+    max-width:1400px;
+
+    margin:40px auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+.product-item{
+
+    background:#fff0f3;
+
+    border:5px solid #ffd1dc;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    transition:.3s;
+
+    box-shadow:0 6px 15px rgba(0,0,0,.08);
+
+}
+
+.product-item:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 12px 20px rgba(0,0,0,.18);
+
+}
+
+.product-item img{
+
+    width:100%;
+
+    height:260px;
+
+    object-fit:cover;
+
+}
+
+.product-item h3{
+
+    text-align:center;
+
+    color:#ff4d6d;
+
+    margin:15px 10px 5px;
+
+}
+
+.price{
+
+    text-align:center;
+
+    font-size:22px;
+
+    color:#555;
+
+    margin-bottom:15px;
+
+    font-weight:bold;
+
+}
+
+
+/* ---------- Quantity ---------- */
+
+.quantity{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:18px;
+
+}
+
+.quantity button{
+
+    width:38px;
+
+    height:38px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#ff4d6d;
+
+    color:white;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+}
+
+.quantity span{
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    color:#444;
+
+    min-width:25px;
+
+    text-align:center;
+
+}
+
+
+/* ---------- Button ---------- */
+
+.product-item .button{
+
+    display:block;
+
+    width:80%;
+
+    margin:0 auto 20px;
+
+    text-align:center;
+
+}
+
+
+/* ==========================================
+                MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+.character-banner img{
+
+    height:220px;
+
+}
+
+/* Top */
+
+.character-info{
+
+    grid-template-columns:1fr;
+
+}
+
+/* Status */
+
+.character-status{
+
+    grid-template-columns:1fr;
+
+}
+
+/* Products */
+
+.character-products{
+
+    grid-template-columns:1fr;
+
+}
+
+.product-item img{
+
+    height:220px;
+
+}
+
+}
